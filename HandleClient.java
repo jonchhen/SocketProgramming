@@ -34,13 +34,12 @@ public class HandleClient implements Runnable {
 	char close = sentence.charAt(0);
 
 	if( close == 'x'){
-	System.out.println("Closing Connection...");
+	    System.out.println("Closing Connection...");
 
-		   outToClient.println('x');
-                           outToClient.flush();
+		outToClient.println('x');
+        outToClient.flush();
 		socket.close();
-	System.out.println("Connection Closed");
-
+	    System.out.println("Connection Closed");
 
 		cont = false;
 
