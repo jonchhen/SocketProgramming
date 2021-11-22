@@ -32,10 +32,6 @@ public class Client{
 	System.exit(0);
 	}
 	/**************/	
-
-	
-	
-	
             System.out.println("Answer: " + finalAnswer);
         }
 
