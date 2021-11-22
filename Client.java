@@ -34,7 +34,6 @@ public class Client{
 	/**************/	
             System.out.println("Answer: " + finalAnswer);
         }
-
         socket.close();
 
 
