@@ -1,12 +1,16 @@
 import java.io.*;
 import java.net.*;
-/**This file won't need to be changed much, most of the code will be in the run function in the HandleClient.java file */
+
+/**
+ * This file won't need to be changed much, most of the code will be in the run
+ * function in the HandleClient.java file
+ */
 public class Server {
     public static void main(String[] args) throws IOException {
-        
+
         new Thread(() -> {
             try {
-                //Create the server socket connection
+                // Create the server socket connection
                 ServerSocket serverSocket = new ServerSocket(3000);
 
                 while (true) {
@@ -16,10 +20,9 @@ public class Server {
                     thread.start();
                     System.out.println("New Thread Started");
                 }
-            }
-            catch(IOException ex) {
+            } catch (IOException ex) {
                 System.err.println(ex);
             }
-        }).start();      
+        }).start();
     }
 }
