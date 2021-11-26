@@ -7,6 +7,7 @@ JC = javac
 CLASSES = \
 	Client.java \
 	HandleClient.java \
+	Utilities.java \
 	Server.java
 
 default: classes

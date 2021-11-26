@@ -13,11 +13,13 @@ public class Server {
                 // Create the server socket connection
                 ServerSocket serverSocket = new ServerSocket(3000);
 
+                //new threads are created here when new clients connect
                 while (true) {
                     Socket socket = serverSocket.accept(); // Connect to a client
                     HandleClient client = new HandleClient(socket);
                     Thread thread = new Thread(client);
                     thread.start();
+                    client.setThreadID(thread.getId());
                     System.out.println("New Thread Started");
                 }
             } catch (IOException ex) {
