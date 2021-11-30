@@ -11,6 +11,7 @@ Information about the files included:
 Client.java: Has client code
 Server.java: Has server code
 HandleClient.java: Handles the math part of the program / deals with client
+Utilities.java: Handles the code that writes to the log file
 Makefile: used to compile the program
 
 
