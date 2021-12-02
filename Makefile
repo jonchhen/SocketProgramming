@@ -16,3 +16,12 @@ classes: $(CLASSES:.java=.class)
 
 clean:
 	$(RM) *.class
+
+server:
+	@echo "Running Server..."
+	./server.sh
+
+client:
+	@echo "Running Client..."
+	./client.sh
+	
