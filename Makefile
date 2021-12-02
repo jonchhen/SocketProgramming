@@ -19,9 +19,9 @@ clean:
 
 server:
 	@echo "Running Server..."
-	./server.sh
+	@java Server
 
 client:
 	@echo "Running Client..."
-	./client.sh
+	@java Client
 	

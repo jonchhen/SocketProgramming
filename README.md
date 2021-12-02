@@ -23,11 +23,11 @@ To use the program:
       - type 'make' command to run the Makefile, this compiles all the required files
       - run the Server first, by typing the command:
             One way -> type "java Server" (This is a standard command of executing java program) 
-            Another way -> type "make server" (This executes the target named 'server' in the makefile which runs a bash script with the command - java Server)
+            Another way -> type "make server" (This executes the target named 'server' in the makefile which runs the command - java Server)
 
       - open another terminal at same location, run the Client, by typing the command: 
             One way -> type "java Client" (This is a standard command of executing java program)
-            Another way -> type "make client" (This executes the target named 'client' in the makefile which runs a bash script with the command - java Client)
+            Another way -> type "make client" (This executes the target named 'client' in the makefile which runs the command - java Client)
 
       - for multiple client open multiple terminals and run the above step
       - from the client window, type the math command, eg: 2 + 2, the cliend gets 4 as a response
