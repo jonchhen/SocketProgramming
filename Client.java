@@ -50,9 +50,10 @@ public class Client {
                 if (response.toLowerCase().equals("x")) {
                     System.out.println("Connection Closed");
                     valid = false;
-                    // "Invalid Format" message means user input invalid. Ask question again
+                // "Invalid Format" message means user input invalid. Ask question again
                 } else if (response.equals("Invalid Format")) {
                     System.out.println("\nError!!! Wrong input format!!!\n");
+                // if format is valid print the servers response (answer to clients request)
                 } else
                     System.out.println("\nAnswer: " + response + "\n");
             }

@@ -35,7 +35,7 @@ public class HandleClient implements Runnable {
                 //after valid handshake we can set the IP address and hostname of the client
                 setIPAndHostname(request);
 
-                //print basic message in console, log details
+                //print basic message in console, log details, send success! message to the client
                 System.out.println("Connection successful from client: " + request);
                 Utilities.writeConnectionToLog(request, threadID, date, socket.getPort());
                 outToClient.println("success!");
@@ -43,6 +43,7 @@ public class HandleClient implements Runnable {
 
                 while (cont) {
 
+                    //get client requests
                     request = inFromClient.readLine();
     
                     if (request != null) {
@@ -54,6 +55,8 @@ public class HandleClient implements Runnable {
                         if (request.equals("x")) {
                             System.out.println("Closing Connection...");
     
+                            // send "x" message back to client to let them know the connection has been closed
+                            // then close the connection, measure the amount of time the client was connected and log the disconnection event
                             outToClient.println("x");
                             outToClient.flush();
                             socket.close();
@@ -130,7 +133,7 @@ public class HandleClient implements Runnable {
         return response;
     }
 
-    // Validates user input
+    // Validates user requests
     private boolean checkFormat(String[] arr) {
         boolean valid = true;
 

@@ -18,6 +18,7 @@ public class Server {
                 //new threads are created here when new clients connect
                 while (true) {
                     Socket socket = serverSocket.accept(); // Connect to a client
+                    //create new thread and start it
                     HandleClient client = new HandleClient(socket);
                     Thread thread = new Thread(client);
                     thread.start();

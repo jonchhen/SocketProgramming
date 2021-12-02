@@ -2,8 +2,9 @@ import java.io.*;
 import java.util.Date;
 
 public class Utilities {
-    private static File file = new File("serverlog.txt"); // A connected socket
+    private static File file = new File("serverlog.txt"); 
 
+    //write to log when client connects to server successfully
     public synchronized static boolean writeConnectionToLog(String message, long threadID, Date date, int portNum)
     {
 
@@ -38,7 +39,8 @@ public class Utilities {
         }
         return true;
     }
-
+    
+    //write to log when client successfully disconnects from server
     public synchronized static boolean writeSuccessfulDisconnectToLog(String hostName, String ip, long threadID, Date date, int portNum, long elapsedTime)
     {
 
@@ -74,6 +76,7 @@ public class Utilities {
         return true;
     }
 
+    //write to log when client fails to follow connection protocol and failed connection occurs 
     public synchronized static boolean writeFailedConnectionToLog(String hostName, String ip, long threadID, Date date, int portNum)
     {
 
@@ -108,6 +111,7 @@ public class Utilities {
         return true;
     }
 
+    //write to log when client makes a valid request
     public synchronized static boolean writeEventToLog(String ip, long threadID, Date date, int portNum, String request, int response)
     {
 
@@ -140,6 +144,7 @@ public class Utilities {
         return true;
     }
 
+    //write to log when client makes invalid request
     public synchronized static boolean writeFailedEventToLog(String ip, long threadID, Date date, int portNum, String request, String response)
     {
 
